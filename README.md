@@ -64,8 +64,9 @@ Visit http://localhost:3000 to see the application running.
 
 ## References
 
-    Docker Official Documentation
-    Amazon ECR Documentation
+- [Docker Official Documentation](https://docs.docker.com/)  
+- [Amazon ECR Documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html)
+
 
 ## Optional Enhancements
 
