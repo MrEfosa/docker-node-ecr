@@ -37,34 +37,35 @@ project-root/
 ## Steps to Run Locally
 
 ### 1. Build Docker Image
-```bash
-docker build -t my-node-app .
-```
+
+    docker build -t my-node-app .
+
 ### 2. Run Docker Container
-```bash
-docker run -p 3000:3000 my-node-app
-```
+
+    docker run -p 3000:3000 my-node-app
+
 
 Visit http://localhost:3000 to see the application running.
 
+---
+
 ## Push Docker Image to AWS ECR
 ### 1. Create Private Repository
-```aws ecr create-repository --repository-name my-node-app --region us-east-1```
+    aws ecr create-repository --repository-name my-node-app --region us-east-1
 
 ### 2. Authenticate Docker to ECR
-```aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com```
+    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com
 
 ### 3. Tag Docker Image
-```docker tag my-node-app:latest <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/my-node-app:latest```
+    docker tag my-node-app:latest <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/my-node-app:latest
 
 ### 4. Push Docker Image
-```docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/my-node-app:latest```
+    docker push <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/my-node-app:latest
 
 ## References
 
-Docker Official Documentation
-
-Amazon ECR Documentation
+    Docker Official Documentation
+    Amazon ECR Documentation
 
 ## Optional Enhancements
 
@@ -72,5 +73,7 @@ Amazon ECR Documentation
 - Implement CI/CD pipelines to automatically build and push Docker images
 - Include version or build status badges in README for professionalism
 ---
-**Author:**  Onyekaozuru Tochukwu David
-**Date:** February 2026
+## Author: 
+Onyekaozuru Tochukwu David
+
+February 2026
